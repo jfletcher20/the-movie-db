@@ -3,9 +3,18 @@ App made as part of the "Development of web applications" course. Uses NodeJS, A
 
 # User manual
 
-After running npm install:
+If running <code>npm install</code> works fine for you, then you should delete the node_modules folders first. Since I had major issues with installation of modules after migrating from Linux to Windows, I have decided to leave the node_modules folder in to try and help anybody trying to run the app. 
+
+After running <code>npm install</code>:
 
 <ol>
+  <li>Open the base folder in VS Code and search all files and replace every instance of <code>INSERT_NODE_MODULES_PATH_HERE</code> with your own path to the node_modules folder. Make sure you include the <code>/</code> at the end. Since the "tsc &&" prefix to the start scripts has been removed, the typescript files are not compiled before running anymore so it is important to replace <i>all</i> instances, located in:
+  <ul>
+    <li><code>dirModula</code> in <code>server/konstante.js</code></li>
+    <li><code>dirModula</code> in <code>server/build/konstante.js</code></li>
+    <li><code>typeRoots</code>, <code>paths</code> in <code>server/tsconfig.json</code></li>
+  </ul>
+  </li>
   <li>Add the API key for the v3 API in the "konfiguracija.csv" file if you want external TMDB services to work. The website works without this, but if you want to retrieve new movies or genres from https://www.themoviedb.org/ then you have to include an API key.
   (I know this is normally not supposed to be done, but to make it easier on you, here is my API key: <code>99d77adf9c02e0a70d13e4fc87fac134</code>)</li>
   <li>Enter directory <code>/server/servis</code> via command prompt and execut "npm start"</li>
@@ -15,6 +24,7 @@ After running npm install:
 ### Potential difficulties when running
 Some errors might appear. It seems to vary from PC to PC. Some of my friends were able to execute the project without any issues whatsoever, others had to troubleshoot errors caused by their computers. Normally the start scripts included a "tsc &&" at the start which builds typescript files into the build folder which is where the files that are executed are located, but when trying to run it on my PC I had to remove it. For others the "tsc &&" didn't cause any problems.
 
+Because of all the difficulties I had running it on Windows after moving it from Linux over to my PC, I decided to leave the node_modules folders and you can update them as necessary. It is still necessary to replace the node_modules paths within the project to your own paths, though.
 You can e-mail me and I'll send you screenshots or a video (whichever you request) of the site running.
 
 ## Specifications
