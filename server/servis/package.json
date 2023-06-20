@@ -1,0 +1,15 @@
+{
+  "name": "rest_server",
+  "version": "2.0.0",
+  "description": "",
+  "main": "build/servis/restServer.ts",
+  "scripts": {
+    "start": "node --experimental-fetch ../build/servis/restServer.js ../konfiguracija.csv"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "sqlite3": "https://github.com/tryghost/node-sqlite3/tarball/master"
+  }
+}
